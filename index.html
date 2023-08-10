@@ -6,15 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body><script src="https://player.vimeo.com/api/player.js"></script>
     <h1>Сайт само-техподдержки</h1>
     <p>Поддержи себя сам и тебе придется поддержать другого</p>
     <h2>Разделы:</h2>
     <ul class="list">
-        <li class="chapter"><a href=""></a><p>свои продажи на чужом магазине</p><video src="./src/yoursSalesInAnotherShops.mp4"></video></li>
+        <li class="chapter"><a href=""></a><p>свои продажи на чужом магазине</p>
+        
+            <iframe src="./src/yoursSalesInAnotherShops.mp4" width="640" height="360" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <script>
+                const iframe = document.querySelector('iframe');
+                const player = new Vimeo.Player(iframe);
+            
+                player.on('play', function() {
+                    console.log('played the video!');
+                });
+            
+                player.getVideoTitle().then(function(title) {
+                    console.log('title:', title);
+                });
+            </script>
+
+        </li>
         <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
         <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
         <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
     </ul>
+    
+    
 </body>
 </html>
