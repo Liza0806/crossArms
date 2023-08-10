@@ -5,58 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css.css" />
 </head>
-<body><script src="https://player.vimeo.com/api/player.js"></script>
     <h1>Сайт само-техподдержки</h1>
     <p>Поддержи себя сам и тебе придется поддержать другого</p>
     <h2>Разделы:</h2>
     <ul class="list">
-        <li class="chapter"><a href=""></a><p>свои продажи на чужом магазине</p>
+        <li class="chapter "><a href=""></a>
+            <h3>Cвои продажи на чужом магазине</h3>
+
+            <button class="whatch-text ">Хочу текст</button>
+            <button class="stop-whatch-text is-hidden">Не хочу текст</button>
+            
+            <p class="descr is-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo, expedita tempora iste, consequuntur impedit nisi tenetur quia iusto, fugiat facilis? Delectus inventore adipisci debitis eos! Incidunt aliquam nesciunt quae illum dolores veniam, iusto dolore eligendi, quis iste cumque tempora, ipsum aliquid? Harum qui pariatur consequatur quos assumenda cupiditate veniam!</p>
         
-            <iframe src="https://drive.google.com/file/d/17FQdS_3HYfH-oCWs3yK0hRoiO_z6oEty/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        <button class="whatch">Смотреть видео</button>
+        <button class="stop-whatch is-hidden">Не смотреть видео</button>
 
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <script>
-                let iframe = document.querySelector('iframe');
-                let player = new Vimeo.Player(iframe);
-            
-                player.on('play', function() {
-                    console.log('played the video!');
-                });
-            
-                player.getVideoTitle().then(function(title) {
-                    console.log('title:', title);
-                });
-            </script>
-
+            <iframe class="is-hidden video" src="./videos/salaryAtWeekend.mp4" width="640" height="480"></iframe>
         </li>
 
     
+        <li class="chapter"><a href=""></a>
+            <h3>Cвои продажи на чужом магазине</h3>
 
-        <li class="chapter"><a href=""></a><p>свои продажи в выходные (доплаты)</p>
-        
-            <iframe src="https://drive.google.com/file/d/1Wz6gSNe7K9z207oG_oldODUxrcJ3wUdZ/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+            <button class="whatch-text ">Хочу текст</button>
+            <button class="stop-whatch-text is-hidden">Не хочу текст</button>
 
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <script>
-               iframe = document.querySelector('iframe');
-               player = new Vimeo.Player(iframe);
-            
-                player.on('play', function() {
-                    console.log('played the video!');
-                });
-            
-                player.getVideoTitle().then(function(title) {
-                    console.log('title:', title);
-                });
-            </script>
-
+            <p class="descr is-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo, expedita tempora iste, consequuntur impedit nisi tenetur quia iusto, fugiat facilis? Delectus inventore adipisci debitis eos! Incidunt aliquam nesciunt quae illum dolores veniam, iusto dolore eligendi, quis iste cumque tempora, ipsum aliquid? Harum qui pariatur consequatur quos assumenda cupiditate veniam!</p>
+        <button class="whatch ">Смотреть видео</button>
+        <button class="stop-whatch is-hidden">Не смотреть видео</button>
+            <iframe class="is-hidden video" src="./videos/yoursSalesInAnotherShops.mp4" width="640" height="480"></iframe>
         </li>
-        <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
-        <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
-        <li class="chapter"><a href=""></a><p>херня по 1с</p><video src=""></video></li>
+        
     </ul>
     
-    
+    <script src="./index.js"></script>
 </body>
 </html>
