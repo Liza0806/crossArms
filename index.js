@@ -3,6 +3,9 @@ const watchButtons = document.querySelectorAll('.whatch');
 const ul = document.querySelector("ul")
 const textWhatchBtn = document.querySelectorAll(".whatch-text")
 const allLiElements = ul.querySelectorAll("li");
+const showChapterBtn = document.querySelectorAll(".show-chapter")
+const hideChapterBtn = document.querySelectorAll(".hide-chapter")
+
 
  watchButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -59,3 +62,22 @@ const allLiElements = ul.querySelectorAll("li");
            if (li !== exeptLi) {
              li.classList.remove("is-hidden");
            }})}
+
+           showChapterBtn.forEach(button => {button.addEventListener("click",  () =>{ 
+            const chapter = button.parentElement.querySelector(".list")
+            const hideChapterBtn = button.parentElement.querySelector(".hide-chapter")
+            const showChapterBtn = button.parentElement.querySelector(".show-chapter")
+           chapter.classList.remove("is-hidden")
+           hideChapterBtn.classList.remove("is-hidden")
+           showChapterBtn.classList.add("is-hidden")
+        })})
+           
+        hideChapterBtn.forEach(button => {button.addEventListener("click",  () =>{ 
+            const chapter = button.parentElement.querySelector(".list")
+            const showChapterBtn = button.parentElement.querySelector(".show-chapter")
+            const hideChapterBtn = button.parentElement.querySelector(".hide-chapter")
+           chapter.classList.add("is-hidden")
+           hideChapterBtn.classList.add("is-hidden")
+           showChapterBtn.classList.remove("is-hidden")
+        })})
+           
