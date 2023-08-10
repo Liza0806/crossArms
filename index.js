@@ -2,7 +2,7 @@ const watchButtons = document.querySelectorAll('.whatch');
 ///const video = document.getElementsByClassName("video")
 const ul = document.querySelector("ul")
 const textWhatchBtn = document.querySelectorAll(".whatch-text")
-const allLiElements = ul.querySelectorAll("li");
+//const allLiElements = ul.querySelectorAll("li");
 const showChapterBtn = document.querySelectorAll(".show-chapter")
 const hideChapterBtn = document.querySelectorAll(".hide-chapter")
 
@@ -52,12 +52,16 @@ const hideChapterBtn = document.querySelectorAll(".hide-chapter")
 
         
         function hideLi(exeptLi) {
+            let ancestor = exeptLi.parentElement;
+            const allLiElements = ancestor.parentElement.querySelectorAll("li")
             allLiElements.forEach(li => {
            if (li !== exeptLi) {
              li.classList.add("is-hidden");
            }})}
     
            function showLi(exeptLi) {
+            let ancestor = exeptLi.parentElement;
+            const allLiElements = ancestor.parentElement.querySelectorAll("li")
             allLiElements.forEach(li => {
            if (li !== exeptLi) {
              li.classList.remove("is-hidden");
