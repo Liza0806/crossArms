@@ -48,7 +48,7 @@ const hideChapterBtn = document.querySelectorAll(".hide-chapter")
             hideBtnTx.classList.remove("is-hidden");
             hideLi(button.parentElement);
             chapter.style.width="700px";
-
+            chapter.style.height="100%";
 
     
           }
@@ -58,6 +58,7 @@ const hideChapterBtn = document.querySelectorAll(".hide-chapter")
             hideBtnTx.classList.add("is-hidden");
             showLi(button.parentElement);
             chapter.style.width="300px";
+            chapter.style.height="400px";
         })
          } )});
 
