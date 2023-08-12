@@ -11,20 +11,26 @@ const hideChapterBtn = document.querySelectorAll(".hide-chapter")
   button.addEventListener('click', () => {
       // Находим видео элемент внутри того же родительского элемента
       const video = button.parentElement.querySelector(".video")
-      const hideBtn = button.parentElement.querySelector(".stop-whatch")
-      console.log("sdgsd")
+      const hideBtn = button.parentElement.querySelector(".stop-whatch");
+      const chapter = button.parentElement;
+
+     // console.log("sdgsd")
       // Проверяем, есть ли видео, и запускаем его
       if (video) { 
         video.classList.remove("is-hidden");
         button.classList.add("is-hidden");
         hideBtn.classList.remove("is-hidden");
-        hideLi(button.parentElement)
+        hideLi(button.parentElement);
+        chapter.style.width="700px";
+        chapter.style.height="100%";
       }
       hideBtn.addEventListener("click", ()=> { 
         video.classList.add("is-hidden");
         button.classList.remove("is-hidden");
         hideBtn.classList.add("is-hidden");
-        showLi(button.parentElement)
+        showLi(button.parentElement);
+        chapter.style.width="300px";
+        chapter.style.height="400px";
     })
      } )});
 
@@ -33,20 +39,25 @@ const hideChapterBtn = document.querySelectorAll(".hide-chapter")
           // Находим видео элемент внутри того же родительского элемента
           const text = button.parentElement.querySelector(".descr")
           const hideBtnTx = button.parentElement.querySelector(".stop-whatch-text")
+         const chapter = button.parentElement;
           console.log("sdgsdaaaa")
-          // Проверяем, есть ли видео, и запускаем его
+          // Проверяем, есть ли текст, и запускаем его
           if (text) { 
             text.classList.remove("is-hidden");
            button.classList.add("is-hidden");
             hideBtnTx.classList.remove("is-hidden");
-            hideLi(button.parentElement)
+            hideLi(button.parentElement);
+            chapter.style.width="700px";
+
+
     
           }
           hideBtnTx.addEventListener("click", ()=> { 
             text.classList.add("is-hidden");
            button.classList.remove("is-hidden");
             hideBtnTx.classList.add("is-hidden");
-            showLi(button.parentElement)
+            showLi(button.parentElement);
+            chapter.style.width="300px";
         })
          } )});
 
